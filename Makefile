@@ -4,7 +4,7 @@ VALGRIND = valgrind --leak-check=full --track-origins=yes --show-reachable=yes
 CMD = ./pruebas
 
 build: *.c
-	$(CC) $(CFLAGS) -o pruebas *.c
+	$(CC) $(CFLAGS) -o pruebas *.c -lm
 	$(VALGRIND) $(CMD)
 
 run: build
